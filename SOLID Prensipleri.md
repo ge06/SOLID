@@ -12,9 +12,6 @@ SOLID Prensiplerin temel amacı modüler bir yapı sağlayarak tekrar kullanıla
 
 ![](https://res.cloudinary.com/practicaldev/image/fetch/s--RDU8cD1Y--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/tq7o4zx8mb59yv8yc5hl.png)
 
-Aşağıdaki gibi bir kullanım, herhangi bir aksilikte bir çok hata logu bastıracak ve problemi saptamak zorlaşacak.
-
-Ancak aşağıdaki gibi bir kullanım, aksiyonları birbirinden ayıracağı için daha bağımsız ve takibi kolay bir yapı ortaya çıkaracaktır.
 ### Open-Closed
 
 - Bir class için ana davranışı değiştirmeden, bu davranışının üzerine yeni eklemeler yapılabilir olması gerekir. Bu yaklaşım halihazırda bu classdan faydalanan birimlerde sorun oluşmasını engeller. Geliştirmelerde Single Responsibility ile ters düşmemek adına eklenen özelliklerin ana davranışa bağlı olmasına dikkat edilmelidir.
