@@ -8,14 +8,14 @@ SOLID Prensiplerin temel amacı modüler bir yapı sağlayarak tekrar kullanıla
 
 ### Single Responsibility
 
-- Bir class veya  modül yalnızca bir işten sorumlu olmalıdır, aynı anda birbirinden farklı aktörler için hizmet vermemelidir. Aksi taktir de sorumluluklarından birinde yapacağımız bir değişiklik istenmeyen yerlerde hatalara sebep olabilir. Bir class veya modül için tanımlama yaparken tanım ne kadar uzuyorsa ve ne kadar çok "ve" kullanıyorsak, bu konseptten o kadar uzaklaşıyoruz demektir.
+- Bir class veya  modül yalnızca bir işten sorumlu olmalıdır, aynı anda birbirinden farklı aktörler için hizmet vermemelidir. Aksi taktirde sorumluluklarından birinde yapacağımız bir değişiklik istenmeyen yerlerde hatalara sebep olabilir. Bir class veya modül için tanımlama yaparken tanım ne kadar uzuyorsa ve ne kadar çok "ve" kullanıyorsak, bu konseptten o kadar uzaklaşıyoruz demektir.
   <br/><br/>
 ![](https://res.cloudinary.com/practicaldev/image/fetch/s--RDU8cD1Y--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/tq7o4zx8mb59yv8yc5hl.png)
 
 
 ### Open-Closed
 
-- Bir class için ana davranışı değiştirmeden, bu davranışının üzerine, izin verilen ölçüde, yeni eklemeler yapılabilir olması gerekir. Bu yaklaşım, Class için önemli olan temel elemanlarını koruyarak, halihazırda bu classtan faydalanan birimlerde sorun oluşmasını engeller. Geliştirmelerde Single Responsibility ile ters düşmemek adına eklenen özelliklerin ana davranışa bağlı olmasına dikkat edilmelidir.
+- Bir class için ana davranışı değiştirmeden, bu davranışının üzerine, izin verilen ölçüde, yeni eklemeler yapılabilir olması gerekir. Bu yaklaşım, class için önemli olan temel elemanları koruyarak, halihazırda bu classtan faydalanan birimlerde sorun oluşmasını engeller. Geliştirmelerde Single Responsibility ile ters düşmemek adına eklenen özelliklerin ana davranışa bağlı olmasına dikkat edilmelidir.
   <br/><br/>
      ![](https://badearobert.ro/blog/wp-content/uploads/2018/05/Open-Closed.png)
 
@@ -36,7 +36,7 @@ SOLID Prensiplerin temel amacı modüler bir yapı sağlayarak tekrar kullanıla
   <br/><br/>
     ![](https://miro.medium.com/max/1280/1*m-CMwIOkrY6-Y1lkE3kLfw.jpeg)
 
-## SRING ve SOLID Prensipleri
+## SPRING ve SOLID Prensipleri
 
 ### Single Responsibility
 
@@ -48,7 +48,7 @@ SOLID Prensiplerin temel amacı modüler bir yapı sağlayarak tekrar kullanıla
 
 ### Open-Closed
 
-  - Aynı model üzerinden devam edilirse, Open-Closed ilkesi doğrultusunda en az değişiklik ile yeni özellik eklemeleri yapılabilmesi için ilk olarak, service ve controller arasındaki bağlantıyı azaltmak gereklidir. Bunu da araya bir başka interface katmanı ekleyerek yapabiliriz. Böylelikle service layerini inject eden controller servicedeki değişikliklerden en az şekilde etkilenir.
+  - Aynı model üzerinden devam edilirse, Open-Closed ilkesi doğrultusunda en az değişiklik ile yeni özellik eklemeleri yapılabilmesi için ilk olarak, service ve controller arasındaki bağlantıyı azaltmak gereklidir. Bunu da araya bir başka interface katmanı ekleyerek yapabiliriz. Böylelikle service katmanını inject eden controller servicedeki değişikliklerden en az şekilde etkilenir.
     <br/><br/>
     ![](https://miro.medium.com/max/568/1*nbK0eDoEyZNa229TH9ycPQ.png)
     <br/><br/>
@@ -56,11 +56,11 @@ SOLID Prensiplerin temel amacı modüler bir yapı sağlayarak tekrar kullanıla
     <br/><br/>
     ![](https://miro.medium.com/max/410/1*--xmI3vOX_8xnX8kN0PDZw.png) 
 
-    Burda ServiceImpl classlarının hesaplama classlarına bağımlılığı en az seviyede tutulmuş olur ve daha sonradan gelecek başta türde hesaplamalarda bu CalculatorService arayüzü üzerinden gerçekleştirilebilir.
+    Burda ServiceImpl classlarının hesaplama classlarına bağımlılığı en az seviyede tutulmuş olur ve daha sonradan gelecek başka türde hesaplamalar da bu CalculatorService arayüzü üzerinden gerçekleştirilebilir.
 
 ### Liskov Substitution
 
-  - CashFlow projesi üzerinde geliştirme için devam edersek Liskov için yapabileceğimiz şey service classlarını düzenlemek olacak. İlk olarak Controller classları için kullanılan serviceler ile hesaplama için kullanılan serviclerin ayrımını yapıyoruz ki hesaplama servisinin repository sınıfları ile olan gereksiz bağlantısı ortadan kalksın. Bunları kendi entityleri ile başka bir package içerisie taşıyoruz.
+  - CashFlow projesi üzerinde geliştirme için devam edersek Liskov için yapabileceğimiz şey, service classlarını düzenlemek olacak. İlk olarak Controller classları için kullanılan serviceler ile hesaplama için kullanılan serviclerin ayrımını yapıyoruz ki hesaplama servisinin repository sınıfları ile olan gereksiz bağlantısı ortadan kalksın. Bunları kendi entityleri ile başka bir package içerisie taşıyoruz.
     <br/><br/>
     ![](https://miro.medium.com/max/700/1*CCxROVMCYCoG1HBT3waYSA.png)
   
@@ -72,7 +72,7 @@ SOLID Prensiplerin temel amacı modüler bir yapı sağlayarak tekrar kullanıla
 
 ### Interface Segregation
 
-  - Ek olarak biz bir tane daha, gelir ve gider arasında dönüştürme yapan bir service yaratmak istediğimizde bunları tek bir service altında değil de, bir parentdan implement ederek oluşturduğumuzda, sınıfların ortak bir arayüzü implement edip gereksiz methodları override etmeye çalışmasını engellemiş oluruz.
+  - Ek olarak bir tane daha, gelir ve gider arasında dönüştürme yapan bir service yaratmak istediğimizde bunları tek bir service altında değil de, bir parentdan implement ederek oluşturduğumuzda, sınıfların ortak bir arayüzü implement edip gereksiz methodları override etmeye çalışmasını engellemiş oluruz.
     <br/><br/>
   ![](https://miro.medium.com/max/700/1*cT8R_47qtz1jENtcOc645Q.png)
 
@@ -88,7 +88,7 @@ SOLID Prensiplerin temel amacı modüler bir yapı sağlayarak tekrar kullanıla
 
 ## Dependency Inversion, Dependency Injection ve Inversion of Control
 
-  - Dependency Inversion farklı seviyelerdeki modül veya sınıfların arasındaki iletişimin arayüzler aracılığıyla sağlanarak bağımlılığı azaltır ancak yinede instance tanımlamaları hala tanımlanan sınıf tarafından yapıldığı için bağımlılık tam manasıyla sağlanmış değildir.
+  - Dependency Inversion farklı seviyelerdeki modül veya sınıfların arasındaki iletişimin arayüzler aracılığıyla sağlanarak bağımlılığı azaltır ancak yine de instance tanımlamaları hala tanımlanan sınıf tarafından yapıldığı için bağımlılık tam manasıyla sağlanmış değildir.
     Bunu aşmak için Dependency Injection kullanılır. Dependency Injection, Inversion of Control prensibini implement eden bir design patern’dır. Bağımlılıklar class’a dışarıdan “enjekte” edilir.
     <br/><br/>
     ![image info](./images/temp.png)
