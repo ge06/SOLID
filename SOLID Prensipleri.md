@@ -90,5 +90,5 @@ SOLID Prensiplerin temel amacı modüler bir yapı sağlayarak tekrar kullanıla
 
   - Dependency Inversion farklı seviyelerdeki modül veya sınıfların arasındaki iletişimin arayüzler aracılığıyla sağlanarak bağımlılığı azaltır ancak yinede instance tanımlamaları hala tanımlanan sınıf tarafından yapıldığı için bağımlılık tam manasıyla sağlanmış değildir.
     Bunu aşmak için Dependency Injection kullanılır. Dependency Injection, Inversion of Control prensibini implement eden bir design patern’dır. Bağımlılıklar class’a dışarıdan “enjekte” edilir.
-    <br/><br/><br/>
+    <br/><br/>
     ![image info](./images/temp.png)
