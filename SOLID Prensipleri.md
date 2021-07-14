@@ -27,7 +27,7 @@ SOLID Prensiplerin temel amacı modüler bir yapı sağlayarak tekrar kullanıla
     ![](https://i0.wp.com/gokhan-gokalp.com/wp-content/uploads/2015/06/liskov.jpg?ssl=1)
     
 ### Interface Segregation
-- Bir class ile kullandığı araçlar arasında doğrudan değil de dolaylı bir ilişki olmalıdır. Bu ilişki interface aracılığıyla sağlanmalıdır. Bu sayede aracın nasıl çalıştığı class tarafından bilinmek zorunda değildir, aracın bağlantıyı sağlayan interface'in gerekliliklerini sağlaması yeterli olur. Bu durum classın bağımlılığını azaltmış olur ayrıca tekrar kullanılabilirlik de arttırılmış olur.
+- Bir classtan beklenen aksiyonlar, o classın yapmakta yetersiz olduğu veya çalışma alanında olmayan aksiyonlar olmamalıdır, bu tanımlamalar gereksiz olup okunabilirlik açısından kötü bir etki yaratabilir. Bu kapsamda temelde aynı özelliklere sahip olsa da, farklı aksiyonlar gerçekleştirmek üzere geliştirilen classlar için, aksiyonlara yönelik interfaceler kullanılmalıdır.
 
  
 ### Dependency Inversion
